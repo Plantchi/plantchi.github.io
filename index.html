@@ -1,0 +1,20 @@
+<!--The index.html is the default page upon loading in the browser. This will include script to listen for server updates. (maybe the wireframes as well?) -->
+
+<html>
+  <head>
+    <script>
+      let HOST = location.origin.replace(/^http/, 'ws')
+      let ws = new WebSocket(HOST);
+      let el;
+
+      ws.onmessage = (event) => {
+        el = document.getElementById('server-time');
+        el.innerHTML = 'Server time: ' + event.data;
+      };
+    </script>
+  </head>
+  <body>
+    <p id="server-time"></p>
+    <p id="initMsg"> Hi Sarah! this is where we need to upload our wireframes to sit on the main default browser.</p>
+  </body>
+</html>

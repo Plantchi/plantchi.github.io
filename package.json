@@ -1,9 +1,13 @@
 {
   "name": "plantchi",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.17.x"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +21,8 @@
   },
   "homepage": "https://github.com/sahaskew/Plantchi#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "start": "^5.1.0",
+    "ws": "^7.4.3"
   }
 }
