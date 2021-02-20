@@ -1,0 +1,29 @@
+<!--The index.html is the default page upon loading in the browser. This will include script to listen for server updates. (maybe the wireframes as well?) -->
+<!-- general websocket 
+      let HOST = location.origin.replace(/^http/, 'ws')
+      let ws = new WebSocket(HOST);
+      let el;
+
+      ws.onmessage = (event) => {
+        el = document.getElementById('server-time');
+        el.innerHTML = 'Server time: ' + event.data;
+      };
+-->
+<html>
+  <head>
+    <script src = "/socket.io/socket.io.js"></script> 
+    <script>
+      let socket = io();
+      let el;
+
+      socket.on('time', function(timeString) {
+        el = document.getElementById('server-time')
+        el.innerHTML = 'Server time: ' + timeString;
+      });
+    </script>
+  </head>
+  <body>
+    <p id="server-time"></p>
+    <p id="initMsg"> Hi Sarah! this file will end up in react code to sit on the main default browser.</p>
+  </body>
+</html>
