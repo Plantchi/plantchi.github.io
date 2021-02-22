@@ -1,0 +1,57 @@
+h2, p{
+    color: rebeccapurple;
+}
+
+h1, h3{
+    color:mediumvioletred;
+}
+body{
+    background-color: #c8fae8;
+    margin: 20px;
+    border: solid 3px;
+    border-radius: 10px;
+    border-color:rebeccapurple;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+img{
+    vertical-align: bottom;
+}
+
+header{
+    border: solid 3px;
+    border-radius: 10px;
+    border-color:rebeccapurple;
+    padding: 10px;
+}
+p{
+    font-weight: bold;
+}
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 480px) {
+    h1{
+        font-size: 30pt !important;
+    }
+    img {
+        height: 70%;
+        width: 70%;
+    }
+
+}
+@media screen and (max-width: 360px) {
+    img {
+        height: 70%;
+        width: 70%;
+    }
+
+    body{
+        margin: 10px;
+    }
+
+}
