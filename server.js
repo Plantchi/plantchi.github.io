@@ -21,6 +21,10 @@ const io = socketIO(server);
 
 io.on('connection', (socket) => {
   console.log('Client connected');
+  socket.on('createRoom',function(room){
+    socket.join(room);
+    console.log('client joined room' + room);
+  })
   socket.on('disconnect', () => console.log('Client disconnected'));
 });
 

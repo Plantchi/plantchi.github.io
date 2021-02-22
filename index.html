@@ -20,6 +20,10 @@
         el = document.getElementById('server-time')
         el.innerHTML = 'Server time: ' + timeString;
       });
+      var room = '1';
+      socket.on('connect', function(){
+        socket.emit('createRoom',room);
+      });
     </script>
   </head>
   <body>
