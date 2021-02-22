@@ -7,6 +7,20 @@ const socketIO = require('socket.io')
 const PORT = process.env.PORT || 3000;
 const INDEX = '/index.html';
 
+
+//cloudinary
+
+var cloudinary = require('cloudinary')
+
+cloudinary.config({
+  cloud_name: 'dkpjewza8',
+  api_key: '273335887135532',
+  api_secret: 'Axiqeb_EEk6M67Gjjdngnod4cJ0'
+})
+
+// cloudinary.url("tree.png"), {width: 100, height: 150, crop: "fill"}
+//end of cloudinary
+
 //create http server
 const server = express()
   .use((req, res) => res.sendFile(INDEX, { root: __dirname }))
