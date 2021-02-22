@@ -12,18 +12,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sahaskew/Plantchi.git"
+    "url": "git+https://github.com/sarahhaskew/Plantchi.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sahaskew/Plantchi/issues"
+    "url": "https://github.com/sarahhaskew/Plantchi/issues"
   },
-  "homepage": "https://github.com/sahaskew/Plantchi#readme",
+  "homepage": "https://github.com/sarahhaskew/Plantchi#readme",
   "dependencies": {
     "express": "^4.17.1",
     "socket.io": "^3.1.1",
     "start": "^5.1.0",
-    "ws": "^7.4.3"
+    "ws": "^7.4.3",
+    "cloudinary": ""
   }
 }
