@@ -28,4 +28,7 @@ io.on('connection', (socket) => {
   socket.on('disconnect', () => console.log('Client disconnected'));
 });
 
+room = '1';
+io.in(room).emit('message', "whats up plant nerds");
+//test function
 setInterval(() => io.emit('time', new Date().toTimeString()), 1000);
