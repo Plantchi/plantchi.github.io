@@ -30,8 +30,7 @@ p{
 .flex-container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
-    justify-content: space-evenly;
+    justify-content: left;
 }
 
 @media screen and (max-width: 480px) {
@@ -42,7 +41,6 @@ p{
         height: 70%;
         width: 70%;
     }
-
 }
 @media screen and (max-width: 360px) {
     img {
