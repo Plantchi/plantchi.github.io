@@ -11,7 +11,6 @@ const INDEX = '/index.html';
 //cloudinary
 
 var cloudinary = require('cloudinary')
-
 cloudinary.config({
   cloud_name: 'dkpjewza8',
   api_key: '273335887135532',
