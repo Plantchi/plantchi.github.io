@@ -1,8 +1,8 @@
 /*local port is set to :   http://localhost:3000
  */
-const express = require('express')
-const socketIO = require('socket.io')
-//const {Server} = require('ws');
+const app = require('express')();
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
 
 const PORT = process.env.PORT || 3000;
 const INDEX = '/index.html';
@@ -21,28 +21,36 @@ cloudinary.config({
 // cloudinary.url("tree.png"), {width: 100, height: 150, crop: "fill"}
 //end of cloudinary
 
-//create http server
+/*create http server
 const server = express()
   .use((req, res) => res.sendFile(INDEX, { root: __dirname }))
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
-
-
-//web socket server takes an http server as an arguement to listen to events on client side (reqs)
-//const wss = new Server ({ server }) 
+*/
 
 //socket IO takes http server as arg to listen to socketIO requests
-const io = socketIO(server);
+//(attach socket.io to our http server)
+//const io = socketIO(server);
+app.get('/', (req,res) =>{
+  res.sendFile(INDEX, { root: __dirname });
+})
 
 io.on('connection', (socket) => {
   console.log('Client connected');
-  socket.on('createRoom',function(room){
+ 
+  socket.on('createRoom', room => {
     socket.join(room);
-    console.log('client joined room' + room);
+    console.log('client joined room ' + room);
+    io.in(room).emit('message', 'sup plant nerds');
   })
+
   socket.on('disconnect', () => console.log('Client disconnected'));
 });
 
-room = '1';
-io.in(room).emit('message', "whats up plant nerds");
 //test function
 setInterval(() => io.emit('time', new Date().toTimeString()), 1000);
+
+
+
+http.listen(3000, ()=>{
+  console.log(`Listening on 3000`);
+});
