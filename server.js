@@ -11,7 +11,6 @@ const INDEX = '/index.html';
 //cloudinary
 
 var cloudinary = require('cloudinary')
-
 cloudinary.config({
   cloud_name: 'dkpjewza8',
   api_key: '273335887135532',
@@ -22,6 +21,7 @@ cloudinary.config({
 //end of cloudinary
 
 /*create http server
+//create http server
 const server = express()
   .use((req, res) => res.sendFile(INDEX, { root: __dirname }))
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
