@@ -8,6 +8,8 @@
         el = document.getElementById('server-time');
         el.innerHTML = 'Server time: ' + event.data;
       };
+      
+     
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -24,10 +26,21 @@
       el = document.getElementById('server-time')
       el.innerHTML = 'Server time: ' + timeString;
     });
-    var room = '1';
+    /*var room = '1';
     socket.on('connect', function () {
       socket.emit('createRoom', room);
     });
+    */ 
+   // I need to figure out how to use socket to send browser to next page/route
+    function toRoom(roomNum){
+       socket.emit('createRoom',roomNum);
+      }
+
+    socket.on('message', (data)=>{
+        el = document.getElementById('msg')
+        el.innerHTML = data;
+    })
+   
   </script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -73,31 +86,32 @@
     }
 }
     </style>
-      <div class="flex-item"><button type="button" class="btn "><img
+      <div class="flex-item"><button id="tree" onclick="toRoom(1)" type="button" class="btn "><img
           src="https://res.cloudinary.com/dkpjewza8/image/upload/v1613968494/tree_ru5t4d.png" alt="">
         <p>Tree</p>
       </button>
     </div>
     <div class="flex-item">
-      <button type="button" class="btn"><img class="vine"
+      <button id="vine" onclick="toRoom(2)" type="button" class="btn"><img class="vine"
           src="https://res.cloudinary.com/dkpjewza8/image/upload/v1613968494/vine_vnxb5c.png" alt="">
         <p>Vine</p>
       </button>
     </div>
       <div class="flex-item">
-      <button type="button" class="btn"><img
+      <button id="succulent" onclick="toRoom(3)" type="button" class="btn"><img
           src="https://res.cloudinary.com/dkpjewza8/image/upload/v1613968494/succulent_gv5cvf.png" alt="">
         <p>Succulent</p>
       </button>
       </div>
       <div class="flex-item">
-      <button type="button" class="btn"><img class="flower"
+      <button id="flower" onclick="toRoom(4)"   type="button" class="btn"><img class="flower"
           src="https://res.cloudinary.com/dkpjewza8/image/upload/v1613968494/flower_gdcxrc.png" alt="">
         <p>Flower</p>
       </button>
       </div>
     </div>
     <p id="server-time"></p>
+    <p id="msg"></p>
   </main>
 </body>
 
