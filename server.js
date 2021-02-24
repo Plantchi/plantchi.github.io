@@ -5,8 +5,10 @@ const http = require('http').Server(app);
 const io = require('socket.io')(http);
 
 const PORT = process.env.PORT || 3000;
-const INDEX = '/index.html';
+const INDEX = 'index.html';
+const HOWTO = 'howto.html';
 
+//app.use(express.static(__dirname + '/public/'));
 
 //cloudinary
 
@@ -34,6 +36,14 @@ app.get('/', (req,res) =>{
   res.sendFile(INDEX, { root: __dirname });
 })
 
+app.get('/howto', (req,res) =>{
+  res.sendFile(HOWTO, { root: __dirname });
+})
+
+app.get('/tree', (req,res) =>{
+  res.sendFile(HOWTO, { root: __dirname }); //make a page for the tree interaction aka general care page with tree photo 
+})
+
 io.on('connection', (socket) => {
   console.log('Client connected');
  
@@ -44,6 +54,8 @@ io.on('connection', (socket) => {
   })
 
   socket.on('disconnect', () => console.log('Client disconnected'));
+
+  
 });
 
 //test function
