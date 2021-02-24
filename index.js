@@ -5,12 +5,14 @@
 var express = require('express');
 var socket = require('socket.io'); 
 const HOWTO = 'public/howto.html';
+const PORT = process.env.PORT || 3000;
 
 
 //set up app 
 var app = express();
-var server = app.listen(3000, function(){
-  console.log('Listening on 3000');
+
+var server =app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
 });
 
 //static files for retrieval
