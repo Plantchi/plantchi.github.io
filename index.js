@@ -21,17 +21,12 @@ app.use(express.static('public'));
 //pass the socket a server. "i want socketio to work on this server"
 var io = socket(server);
 
-//cloudinary
-
 var cloudinary = require('cloudinary')
 cloudinary.config({
   cloud_name: 'dkpjewza8',
   api_key: '273335887135532',
   api_secret: 'Axiqeb_EEk6M67Gjjdngnod4cJ0'
 })
-
-// cloudinary.url("tree.png"), {width: 100, height: 150, crop: "fill"}
-//end of cloudinary
 
 
 app.get('/howto', (req,res) =>{
