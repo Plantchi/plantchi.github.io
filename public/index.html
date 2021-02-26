@@ -45,44 +45,15 @@
    <link rel="stylesheet" href="styles.css" >  
 </head>
 
-<body style="background-color: #c8fae8">
+<body>
   <main>
     <header>
-    <h1 style="color: #c71585">Plantchi</h1>
-    <h2 style="color: #4b0082">Let's Play!</h2>
-    <!-- <a href="howto.html">How To Play the Game</a> -->
+    <h1>Plantchi</h1>
+    <h2>Let's Play!</h2>
+    <a href="howto.html">How To Play the Game</a>
     </header>
-    <h3 id="initMsg" style="color: #c71585"> Choose a plant to take care of</h3>
+    <h3 id="initMsg"> Choose a plant to take care of</h3>
     <div class="flex-container">
-     <style>
-      .flex-container {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: left;
-    }
-    h1, h2, h3{
-      margin-left: 10px;
-    }
-@media screen and (max-width: 480px) {
-    h1{
-        font-size: 30pt !important;
-    }
-    img {
-        height: 70%;
-        width: 70%;
-    }
-}
-@media screen and (max-width: 360px) {
-    img {
-        height: 70%;
-        width: 70%;
-    }
-
-    body{
-        margin: 10px;
-    }
-}
-    </style>
       <div class="flex-item"><a href = '/tree'><button id="tree" onclick="toRoom(1)" type="button" class="btn "><img
           src="https://res.cloudinary.com/dkpjewza8/image/upload/v1613968494/tree_ru5t4d.png" alt="">
         <p>Tree</p>

@@ -1,7 +1,5 @@
-This is a readme file for our plantchi game.
-testing testy test
-
-
+#Plantchi#
+## A fun collaborative multiplayer plant care game ##
 
 Need to install with npm:
 

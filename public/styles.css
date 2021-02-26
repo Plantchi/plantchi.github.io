@@ -1,24 +1,27 @@
 h2, p, li{
     color: rebeccapurple;
     margin-left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h1, h3{
-    /* color:mediumvioletred; */
+    color:mediumvioletred;
     margin-left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body{
-    /* background-color: #c8fae8; */
+    background-color: #c8fae8;
     margin: 20px;
     border: solid 3px;
     border-radius: 10px;
     border-color:rebeccapurple;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 li{
     list-style-type: circle;
     margin-right: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 img{
@@ -34,12 +37,12 @@ header{
 p{
     font-weight: bold;
 }
-/* .flex-container {
+.flex-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: left;
-} */
-/* 
+} 
+
 @media screen and (max-width: 480px) {
     h1{
         font-size: 30pt !important;
@@ -58,4 +61,4 @@ p{
     body{
         margin: 10px;
     }
-} */
+}
