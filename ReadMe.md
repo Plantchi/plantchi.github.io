@@ -1,4 +1,4 @@
-#Plantchi#
+# Plantchi #
 ## A fun collaborative multiplayer plant care game ##
 
 Need to install with npm:
