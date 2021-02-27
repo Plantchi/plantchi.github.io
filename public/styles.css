@@ -16,7 +16,15 @@
     border-color:rebeccapurple;
     padding: 10px;
 }
-
+.leaving{
+    border: solid 3px;
+    border-radius: 10px;
+    border-color:rebeccapurple;
+}
+.leaving_img {
+    margin-right: -100px;
+    position:relative;
+}
 .btn {
     padding: 0;
 }
