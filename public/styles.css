@@ -1,4 +1,30 @@
-h2, p, li{
+.flex-row-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    border: solid 3px;
+    border-radius: 10px;
+    border-color:rebeccapurple;
+    padding: 10px;
+}    
+.flex-row-item {
+    width: 110px;
+    height: 110px;
+    border: solid 3px;
+    border-radius: 10px;
+    border-color:rebeccapurple;
+    padding: 10px;
+}
+
+.btn {
+    padding: 0;
+}
+.needs_images{
+    height: 90px;
+    width: 90px;
+}
+p, li{
     color: rebeccapurple;
     margin-left: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -6,6 +32,11 @@ h2, p, li{
 
 h1, h3{
     color:mediumvioletred;
+    margin-left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.h2{
+    color: rebeccapurple;
     margin-left: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -25,7 +56,7 @@ li{
 }
 
 img{
-    vertical-align: bottom;
+    height: 200px;
 }
 
 header{
