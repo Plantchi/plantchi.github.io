@@ -26,57 +26,57 @@
       el = document.getElementById('server-time')
       el.innerHTML = 'Server time: ' + timeString;
     });
-  
-   // I need to figure out how to use socket to send browser to next page/route
-    function toRoom(roomNum){
-       socket.emit('createRoom',roomNum);
-      }
 
-    socket.on('message', (data)=>{
-        el = document.getElementById('msg')
-        el.innerHTML = data;
+    // I need to figure out how to use socket to send browser to next page/route
+    function toRoom(roomNum) {
+      socket.emit('createRoom', roomNum);
+    }
+
+    socket.on('message', (data) => {
+      el = document.getElementById('msg')
+      el.innerHTML = data;
     })
-   
+
   </script>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <title>Plantchi</title>
-   <link rel="stylesheet" href="styles.css" >  
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <main>
     <header>
-    <h1>Plantchi</h1>
-    <h2>Let's Play!</h2>
-    <a href="howto.html">How To Play the Game</a>
+      <h1>Plantchi</h1>
+      <h2>Let's Play!</h2>
+      <a href="howto.html">How To Play the Game</a>
     </header>
     <h3 id="initMsg"> Choose a plant to take care of</h3>
     <div class="flex-container">
-      <div class="flex-item"><a href = '/tree'>
-        <button id="tree" onclick="toRoom(1)" type="button" class="btn "><img
-          src="https://res.cloudinary.com/dkpjewza8/image/upload/v1613968494/tree_ru5t4d.png" alt="">
-        <p>Tree</p>
-      </button></a>
-    </div>
-    <div class="flex-item">
-      <button id="vine" onclick="toRoom(2)" type="button" class="btn"><img class="vine"
-          src="https://res.cloudinary.com/dkpjewza8/image/upload/v1613968494/vine_vnxb5c.png" alt="">
-        <p>Vine</p>
-      </button>
-    </div>
-      <div class="flex-item">
-      <button id="succulent" onclick="toRoom(3)" type="button" class="btn"><img
-          src="https://res.cloudinary.com/dkpjewza8/image/upload/v1613968494/succulent_gv5cvf.png" alt="">
-        <p>Succulent</p>
-      </button>
+      <div class="flex-item"><a href='/tree'>
+          <button id="tree" onclick="toRoom(1)" type="button" class="btn "><img
+              src="https://res.cloudinary.com/dkpjewza8/image/upload/v1613968494/tree_ru5t4d.png" alt="">
+            <p>Tree</p>
+          </button></a>
       </div>
       <div class="flex-item">
-      <button id="flower" onclick="toRoom(4)"   type="button" class="btn"><img class="flower"
-          src="https://res.cloudinary.com/dkpjewza8/image/upload/v1613968494/flower_gdcxrc.png" alt="">
-        <p>Flower</p>
-      </button>
+        <button id="vine" onclick="toRoom(2)" type="button" class="btn"><img class="vine"
+            src="https://res.cloudinary.com/dkpjewza8/image/upload/v1613968494/vine_vnxb5c.png" alt="">
+          <p>Vine</p>
+        </button>
+      </div>
+      <div class="flex-item">
+        <button id="succulent" onclick="toRoom(3)" type="button" class="btn"><img
+            src="https://res.cloudinary.com/dkpjewza8/image/upload/v1613968494/succulent_gv5cvf.png" alt="">
+          <p>Succulent</p>
+        </button>
+      </div>
+      <div class="flex-item">
+        <button id="flower" onclick="toRoom(4)" type="button" class="btn"><img class="flower"
+            src="https://res.cloudinary.com/dkpjewza8/image/upload/v1613968494/flower_gdcxrc.png" alt="">
+          <p>Flower</p>
+        </button>
       </div>
     </div>
     <p id="server-time"></p>
