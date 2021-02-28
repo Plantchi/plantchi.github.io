@@ -1,64 +1,105 @@
-h2, p, li{
-    color: rebeccapurple;
-    margin-left: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.flex-row-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  border: solid 3px;
+  border-radius: 10px;
+  border-color: rebeccapurple;
+  padding: 10px;
+}
+.flex-row-item {
+  width: 110px;
+  height: 110px;
+  border: solid 3px;
+  border-radius: 10px;
+  border-color: rebeccapurple;
+  padding: 10px;
+}
+.leaving {
+  border: solid 3px;
+  border-radius: 10px;
+  border-color: rebeccapurple;
+}
+.leaving_img {
+  margin-right: -100px;
+  position: relative;
+}
+.btn {
+  padding: 0;
+}
+.needs_images {
+  height: 90px;
+  width: 90px;
+}
+p,
+li {
+  color: rebeccapurple;
+  margin-left: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-h1, h3{
-    color:mediumvioletred;
-    margin-left: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+h1,
+h3 {
+  color: mediumvioletred;
+  margin-left: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-body{
-    background-color: #c8fae8;
-    margin: 20px;
-    border: solid 3px;
-    border-radius: 10px;
-    border-color:rebeccapurple;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.h2 {
+  color: rebeccapurple;
+  margin-left: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
-li{
-    list-style-type: circle;
-    margin-right: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-img{
-    vertical-align: bottom;
+body {
+  background-color: #c8fae8;
+  margin: 20px;
+  border: solid 3px;
+  border-radius: 10px;
+  border-color: rebeccapurple;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header{
-    border: solid 3px;
-    border-radius: 10px;
-    border-color:rebeccapurple;
-    padding: 10px;
+li {
+  list-style-type: circle;
+  margin-right: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-p{
-    font-weight: bold;
+
+img {
+  height: 200px;
+}
+
+header {
+  border: solid 3px;
+  border-radius: 10px;
+  border-color: rebeccapurple;
+  padding: 10px;
+}
+p {
+  font-weight: bold;
 }
 .flex-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: left;
-} 
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left;
+}
 
 @media screen and (max-width: 480px) {
-    h1{
-        font-size: 30pt !important;
-    }
-    img {
-        height: 70%;
-        width: 70%;
-    }
+  h1 {
+    font-size: 30pt !important;
+  }
+  img {
+    height: 70%;
+    width: 70%;
+  }
 }
 @media screen and (max-width: 360px) {
-    img {
-        height: 70%;
-        width: 70%;
-    }
+  img {
+    height: 70%;
+    width: 70%;
+  }
 
-    body{
-        margin: 10px;
-    }
+  body {
+    margin: 10px;
+  }
 }
