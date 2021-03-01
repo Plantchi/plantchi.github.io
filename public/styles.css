@@ -38,7 +38,6 @@ h2 {
   padding: 0;
 }
 
-
 p,
 li {
   color: rebeccapurple;
@@ -99,10 +98,10 @@ p {
   }
 }
 @media screen and (max-width: 372px) {
-  img{
+  img {
     height: 100px;
   }
-  .flex-item{
+  .flex-item {
     width: 120px;
   }
 }
