@@ -16,27 +16,13 @@
   border-color: rebeccapurple;
   padding: 10px;
 }
-.leaving {
-  border: solid 3px;
-  border-radius: 10px;
-  border-color: rebeccapurple;
-}
-.leaving_img {
-  margin-right: -100px;
-  position: relative;
-}
+
 .btn {
   padding: 0;
 }
 .needs_images {
   height: 90px;
   width: 90px;
-}
-p,
-li {
-  color: rebeccapurple;
-  margin-left: 10px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h1,
@@ -46,7 +32,7 @@ h3 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .h2 {
-  color: rebeccapurple !important;
+  color: rebeccapurple;
   margin-left: 10px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
