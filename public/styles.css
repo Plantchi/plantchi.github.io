@@ -20,6 +20,7 @@ h2 {
 .flex-container {
   display: flex;
   flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-evenly;
   border: solid 3px;
   border-radius: 10px;
@@ -58,12 +59,19 @@ header {
 p {
   font-weight: bold;
 }
-.flex-container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: left;
+.needs_images {
+  height: 90px;
+  width: 90px;
 }
-
+.leaving {
+  border: solid 3px;
+  border-radius: 10px;
+  border-color: rebeccapurple;
+}
+.leaving_img {
+  margin-right: -100px;
+  position: relative;
+}
 @media screen and (max-width: 480px) {
   h1 {
     font-size: 30pt !important;
