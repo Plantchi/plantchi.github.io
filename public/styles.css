@@ -38,12 +38,12 @@ h2 {
   padding: 0;
 }
 
+
 p,
 li {
   color: rebeccapurple;
   margin-left: 10px;
   list-style-type: circle;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 img {
