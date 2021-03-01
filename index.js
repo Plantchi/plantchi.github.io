@@ -44,6 +44,10 @@ io.on("connection", (socket) => {
     console.log("client joined room " + room);
     io.in(room).emit("message", "sup plant nerds");
   });
+  
+  socket.on("changeHp", function(data){
+    data += 3; 
+  });
 
   socket.on("disconnect", () => console.log("Client disconnected"));
 });

@@ -10,6 +10,24 @@
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <title> Tree needs</title>
   <link rel="stylesheet" href="styles.css">
+ <script>
+   let socket = io(); //create a new socket using io lib
+   let el;
+   var sun = 0;
+
+   socket.on('time', function(timeString) {
+    el = document.getElementById('server-time')
+    el.innerHTML = 'Server time: ' + timeString;
+   });
+  // in progress fn to send data to serve to be changed and emitted back to this page 
+   function changeHp(sun){
+    socket.emit('changeHp',sun);
+    console.log( "the value of sun hp is now: " + sun.value);
+   }
+
+ </script>
+
+
 </head>
 
 <body>
@@ -17,7 +35,7 @@
     <h1>What does your plant need?</h1>
     <div class="flex-row-container">
       <div class="flex-row-item">
-        <button type="button" class="btn">
+        <button type="button" class="btn" onclick="changeHp(sun)">
           <img class="needs_images"
             src="https://res.cloudinary.com/dkpjewza8/image/upload/v1614401607/sun_1_orcvxh.png">
         </button>

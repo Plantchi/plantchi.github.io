@@ -1,0 +1,20 @@
+For our project, we had to research heavily into websockets and what their functionality is used for.
+Originally, we sought to use basic websockets module but decided socketIO was more modern and clean. 
+
+We had to install:
+socketIO
+express
+
+Sarah used lots of bootstrap to make frontend functionality clean and straightforward when desiging for 
+different browsers.
+
+Kelsey struggled with figuring out if it made more sense for the socketIO to be in charge of all game
+implementations. For example, should a client socket send a message to server that the "sun button" has been clicked.
+Then the server would alter the values of current connections plant, and send a message back that it has been altered.
+This seemed like alot of extra steps for no apparent benefit, so we decided adding script to the html responsible for game
+play was alot easier. I think if I made a game again, I would like to try to design something that requires sockets
+for every move made.  (wait,,, we might actually need to do this lol)
+
+I struggled with socketIO basically not allowing a socket connection to persist if the page is rerouted. I had to 
+change the design a bit so that the loading page is the waiting room, and once you choose a plant, that is where the 
+socket and room spec is created inside that specific HTML 
