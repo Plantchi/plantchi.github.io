@@ -1,0 +1,17 @@
+
+.leaving {
+  border: solid 3px;
+  border-radius: 10px;
+  border-color: rebeccapurple;
+}
+.leaving_img {
+  margin-right: -100px;
+  position: relative;
+}
+.btn {
+  padding: 0;
+}
+.needs_images {
+  height: 90px;
+  width: 90px;
+}
