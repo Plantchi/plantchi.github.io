@@ -5,6 +5,10 @@
 var express = require("express");
 var socket = require("socket.io");
 const HOWTO = "public/howto.html";
+const TREE = "public/tree.html";
+const VINE = "public/vine.html";
+const SUCCULENT = "public/succulent.html";
+const FLOWER = "public/flower.html";
 const PORT = process.env.PORT || 3000;
 
 //set up app
@@ -20,6 +24,7 @@ app.use(express.static("public"));
 //pass the socket a server. "i want socketio to work on this server"
 var io = socket(server);
 
+//fetch images repo
 var cloudinary = require("cloudinary");
 cloudinary.config({
   cloud_name: "dkpjewza8",
@@ -32,7 +37,19 @@ app.get("/howto", (req, res) => {
 });
 
 app.get("/tree", (req, res) => {
-  res.sendFile(HOWTO, { root: __dirname }); //make a page for the tree interaction aka general care page with tree photo
+  res.sendFile(TREE, { root: __dirname }); 
+});
+
+app.get("/vine", (req, res) => {
+  res.sendFile(VINE, { root: __dirname });
+});
+
+app.get("/succulent", (req, res) => {
+  res.sendFile(SUCCULENT, { root: __dirname });
+});
+
+app.get("/flower", (req, res) => {
+  res.sendFile(FLOWER, { root: __dirname });
 });
 
 io.on("connection", (socket) => {
