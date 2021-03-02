@@ -4,6 +4,7 @@
 //module requests/consts
 var express = require("express");
 var socket = require("socket.io");
+const HOME = "public/index.html";
 const HOWTO = "public/howto.html";
 const TREE = "public/tree.html";
 const VINE = "public/vine.html";
@@ -29,6 +30,10 @@ cloudinary.config({
   cloud_name: "dkpjewza8",
   api_key: "273335887135532",
   api_secret: "Axiqeb_EEk6M67Gjjdngnod4cJ0",
+});
+
+app.get("/", (req, res) => {
+  res.sendFile(HOME, { root: __dirname });
 });
 
 app.get("/howto", (req, res) => {
