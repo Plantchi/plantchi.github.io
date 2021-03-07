@@ -20,12 +20,33 @@
     el.innerHTML = 'Server time: ' + timeString;
    });
 
-   //TODO-Kels: in progress fn to send data to serve to be changed and emitted back to this page 
+  /* //TODO-Kels: in progress fn to send data to serve to be changed and emitted back to this page 
    function changeHp(sun){
     socket.emit('changeHp',sun);
     console.log( "the value of sun hp is now: " + sun.value);
    }
+*/ 
+   function getProgress() {
+	 return document.getElementById("progbar").getAttribute("aria-valuenow");
+	 return document.getElementById("progbar").getAttribute("style","width");
+	 return document.getElementById("progbar").innerHTML;
+	}
+  function setProgress(value) {
+	 document.getElementById("progbar").setAttribute("aria-valuenow",value);
+	 document.getElementById("progbar").setAttribute("style","width: " + value + "%");	
+	 document.getElementById("progbar").innerHTML = (value+ "%"); 
+  }
+//how we incremement will need to be different for every plant
+function increment() {
+	let i = getProgress();
+  if(i >= 100) return; 
+	 else{
+    i += 20;  //its treating this like a string, but when ++i it works?? 
+	  setProgress(i);	
+   }
+ }
 
+ //we need to create an automated decrement
  </script>
 
 </head>
@@ -69,7 +90,8 @@
 
     <div>
       <div class="progress border" style="height:25px;">
-        <div class="progress-bar" style="width:70%; background:aqua; color: black;">Sun</div>
+      <!--  <div class="progress-bar" style="width:70%; background:aqua; color: black;">Sun</div> -->
+      <div class="progress-bar" role="progressbar" id="progbar" style="width:0%" aria-valuenow = "0" aria-valuemin = "0" aria-valuemax = "100"  background =aqua color =black>sun 0%</div> 
       </div>
       <div>
         <div class="progress border" style="height:25px;">
