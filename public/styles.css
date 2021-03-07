@@ -1,3 +1,8 @@
+a {
+  color:rebeccapurple !important;
+  font-size: 20px;
+} 
+
 body {
   background-color: #c8fae8;
   margin: 20px;
@@ -7,11 +12,16 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+h1 {
+  font-size: 50px;
+}
+
 h1,
 h3 {
   color: mediumvioletred;
   margin-left: 10px;
 }
+
 h2 {
   color: rebeccapurple;
   margin-left: 10px;
