@@ -1,64 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <title> Tree needs</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="play.css">
-  
-   <script src="/socket.io/socket.io.js"></script> 
-   <script defer src="play.js"> </script>
-  
-   <script>
-     let socket = io(); //create a new socket connection to client using io lib
-     let el;
-     var sun = 0;
-     
-    /* socket.on("connect", () =>{
-       console.log(socket.id);
-     })
-     */ 
-     socket.emit("createRoom", 1);
-  
-     socket.on('time', function(timeString) {
-      el = document.getElementById('server-time')
-      el.innerHTML = 'Server time: ' + timeString;
-     });
-     </script>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <title> Tree needs</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="play.css">
+
+ <script src="/socket.io/socket.io.js"></script> 
+ <script defer src="play.js"> </script>
+
+ <script>
+   let socket = io(); //create a new socket connection to client using io lib
+   let el;
+   var sun = 0;
+   
+  /* socket.on("connect", () =>{
+     console.log(socket.id);
+   })
+   */ 
+   socket.emit("createRoom", 1);
+
+   socket.on('time', function(timeString) {
+    el = document.getElementById('server-time')
+    el.innerHTML = 'Server time: ' + timeString;
+   });
+   </script>
+</head>
 
 <body>
   <main>
-    <header>
-      <h1>What does your plant need?</h1>
-      <a href="/">Click here to start a new game </a><br>
-    </header>
+    <h1>What does your plant need?</h1>
     <div class="flex-container">
       <div class="flex-item">
         <button type="button" onclick="increment('sun-bar'); decrement('thirst-bar')" class="btn">
-          <img class="needs_images" src="/images/sun.png" alt="">
+          <img class="needs_images" src="/images/sun.png"
+            alt="">
           <p>Sun</p>
         </button>
       </div>
       <div class="flex-item">
         <button type="button" onclick="increment('fun-bar')" class="btn">
-          <img class="needs_images" src="/images/fun.png" alt="">
+          <img class="needs_images"
+            src="/images/fun.png" alt="">
           <p>Fun</p>
         </button>
       </div>
       <div class="flex-item">
         <button type="button" onclick="increment('food-bar')" class="btn">
-          <img class="needs_images" src="/images/food.png" alt="">
+          <img class="needs_images" src="/images/food.png"
+            alt="">
           <p>Food</p>
         </button>
       </div>
       <div class="flex-item">
         <button type="button" onclick="increment('thirst-bar')" class="btn">
-          <img class="needs_images" src="/images/thirst.png" alt="">
+          <img class="needs_images"
+            src="/images/thirst.png" alt="">
           <p>Drink</p>
         </button>
       </div>
@@ -66,24 +67,25 @@
     <div class="flex-container">
       <img class="tree_img" src="/images/tree.png" alt="">
     </div>
-
+    
     <div class="progress border" style="height:25px;">
       <div class="progress-bar sun-bar" role="progressbar" id="sun-bar" style="width:0%" aria-valuenow="0"
         aria-valuemin="0" aria-valuemax="100">Sun</div>
     </div>
-
-    <div class="progress border" style="height:25px;">
-      <div class="progress-bar fun-bar" role="progressbar" id="fun-bar" style="width:0%;" aria-valuenow="0"
-        aria-valuemin="0" aria-valuemax="100">Fun</div>
-    </div>
-    <div class="progress border" style="height:25px;">
-      <div class="progress-bar food-bar" role="progressbar" id="food-bar" style="width:0%" aria-valuenow="0"
-        aria-valuemin="0" aria-valuemax="100">Food</div>
-    </div>
-    <div class="progress border" style="height:25px;">
-      <div class="progress-bar thirst-bar" role="progressbar" id="thirst-bar" style="width:0%;" aria-valuenow="0"
-        aria-valuemin="0" aria-valuemax="100">Drink</div>
-    </div>
+    
+      <div class="progress border" style="height:25px;">
+        <div class="progress-bar fun-bar" role="progressbar" id="fun-bar" style="width:0%;"
+          aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">Fun</div>
+      </div>
+      <div class="progress border" style="height:25px;">
+        <div class="progress-bar food-bar" role="progressbar" id="food-bar" style="width:0%" aria-valuenow="0"
+          aria-valuemin="0" aria-valuemax="100">Food</div>
+      </div>
+      <div class="progress border" style="height:25px;">
+        <div class="progress-bar thirst-bar" role="progressbar" id="thirst-bar"
+          style="width:0%;" aria-valuenow="0" aria-valuemin="0"
+          aria-valuemax="100">Drink</div>
+      </div>
   </main>
 </body>
 
