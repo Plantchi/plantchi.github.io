@@ -1,3 +1,21 @@
+.sun-bar {
+  background-color: blue;
+}
+
+.fun-bar {
+  background-color: rebeccapurple;  
+}
+
+.food-bar {
+  background-color: aqua;
+  color: black;
+  font-weight: bold;
+}
+
+.thirst-bar {
+  background-color: mediumvioletred;
+}
+
 p {
   margin: 0;
 }
