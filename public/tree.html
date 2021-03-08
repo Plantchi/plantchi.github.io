@@ -10,10 +10,19 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="play.css">
 
- <script defer src="play.js">
-   let socket = io(); //create a new socket using io lib
+ <script src="/socket.io/socket.io.js"></script> 
+ <script defer src="play.js"> </script>
+
+ <script>
+   let socket = io(); //create a new socket connection to client using io lib
    let el;
    var sun = 0;
+   
+  /* socket.on("connect", () =>{
+     console.log(socket.id);
+   })
+   */ 
+   socket.emit("createRoom", 1);
 
    socket.on('time', function(timeString) {
     el = document.getElementById('server-time')

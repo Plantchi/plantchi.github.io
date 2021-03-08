@@ -16,6 +16,7 @@ const PORT = process.env.PORT || 3000;
 //set up app
 var app = express();
 
+//create our server via express
 var server = app.listen(PORT, () => {
   console.log(`Our app is running on port ${PORT}`);
 });
@@ -26,6 +27,15 @@ app.use(express.static("public"));
 //pass the socket a server. "i want socketio to work on this server"
 var io = socket(server);
 
+//fetch images repo
+var cloudinary = require("cloudinary");
+cloudinary.config({
+  cloud_name: "dkpjewza8",
+  api_key: "273335887135532",
+  api_secret: "Axiqeb_EEk6M67Gjjdngnod4cJ0",
+});
+
+
 app.get("/", (req, res) => {
   res.sendFile(HOME, { root: __dirname });
 });
@@ -35,7 +45,7 @@ app.get("/howto", (req, res) => {
 });
 
 app.get("/tree", (req, res) => {
-  res.sendFile(TREE, { root: __dirname }); //make a page for the tree interaction aka general care page with tree photo
+  res.sendFile(TREE, { root: __dirname }); 
 });
 
 app.get("/vine", (req, res) => {
@@ -55,13 +65,14 @@ app.get("/gameover", (req, res) => {
 });
 
 io.on("connection", (socket) => {
-  //"socket" refers to socket made for this instance -aka each client has own socket
+ /*"socket" refers to socket made for this instance -aka each client has own socket 
+  to communicate to and from server */
   console.log("Client connected");
 
   socket.on("createRoom", (room) => {
     socket.join(room);
     console.log("client joined room " + room);
-    io.in(room).emit("message", "sup plant nerds");
+    //io.in(room).emit("message", "sup plant nerds");
   });
 
   socket.on("disconnect", () => console.log("Client disconnected"));
