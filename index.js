@@ -10,6 +10,7 @@ const TREE = "public/tree.html";
 const VINE = "public/vine.html";
 const SUCCULENT = "public/succulent.html";
 const FLOWER = "public/flower.html";
+const GAMEOVER = "public/gameover.html";
 const PORT = process.env.PORT || 3000;
 
 //set up app
@@ -34,6 +35,7 @@ cloudinary.config({
   api_secret: "Axiqeb_EEk6M67Gjjdngnod4cJ0",
 });
 
+
 app.get("/", (req, res) => {
   res.sendFile(HOME, { root: __dirname });
 });
@@ -56,6 +58,10 @@ app.get("/succulent", (req, res) => {
 
 app.get("/flower", (req, res) => {
   res.sendFile(FLOWER, { root: __dirname });
+});
+
+app.get("/gameover", (req, res) => {
+  res.sendFile(GAMEOVER, { root: __dirname });
 });
 
 io.on("connection", (socket) => {
