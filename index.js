@@ -56,7 +56,7 @@ app.get("/succulent", (req, res) => {
 app.get("/flower", (req, res) => {
   res.sendFile(FLOWER, { root: __dirname });
 });
-
+/*
 io.on("connection", (socket) => {
   //"socket" refers to socket made for this instance -aka each client has own socket
   console.log("Client connected");
@@ -67,12 +67,14 @@ io.on("connection", (socket) => {
 //    io.in(room).emit("message", "sup plant nerds");
   });
   
-  /*socket.on("changeHp", function(data){
+  socket.on("changeHp", function(data){
     data += 3; 
-  }); */ 
+  }); 
 
   socket.on("disconnect", () => console.log("Client disconnected"));
 });
 
 //test function
 setInterval(() => io.emit("time", new Date().toTimeString()), 1000);
+
+*/ 

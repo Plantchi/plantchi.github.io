@@ -27,10 +27,10 @@
       el.innerHTML = 'Server time: ' + timeString;
     });
 
-    /* I need to figure out how to use socket to send browser to next page/route
+    // I need to figure out how to use socket to send browser to next page/route
     function toRoom(roomNum) {
       socket.emit('createRoom', roomNum);
-    }*/ 
+    } 
 
     socket.on('message', (data) => {
       el = document.getElementById('msg')
