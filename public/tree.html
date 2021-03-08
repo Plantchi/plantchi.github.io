@@ -18,10 +18,6 @@
    let el;
    var sun = 0;
    
-  /* socket.on("connect", () =>{
-     console.log(socket.id);
-   })
-   */ 
    socket.emit("createRoom", 1);
 
    socket.on('time', function(timeString) {
