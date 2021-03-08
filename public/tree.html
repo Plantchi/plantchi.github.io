@@ -15,6 +15,8 @@
    let el;
    var sun = 0;
 
+   socket.emit('createRoom', 1);
+
    socket.on('time', function(timeString) {
     el = document.getElementById('server-time')
     el.innerHTML = 'Server time: ' + timeString;
@@ -57,7 +59,7 @@ function increment() {
     <a href="/">Go back to Home</a>
     <div class="flex-container">
       <div class="flex-item">
-        <button type="button" class="btn">
+        <button type="button" onclick = "increment()" class="btn">
           <img class="needs_images"
             src="https://res.cloudinary.com/dkpjewza8/image/upload/v1614401607/sun_1_orcvxh.png" alt="">
           <p>Sun</p>

@@ -64,12 +64,12 @@ io.on("connection", (socket) => {
   socket.on("createRoom", (room) => {
     socket.join(room);
     console.log("client joined room " + room);
-    io.in(room).emit("message", "sup plant nerds");
+//    io.in(room).emit("message", "sup plant nerds");
   });
   
-  socket.on("changeHp", function(data){
+  /*socket.on("changeHp", function(data){
     data += 3; 
-  });
+  }); */ 
 
   socket.on("disconnect", () => console.log("Client disconnected"));
 });

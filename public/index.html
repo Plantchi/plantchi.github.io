@@ -27,10 +27,10 @@
       el.innerHTML = 'Server time: ' + timeString;
     });
 
-    // I need to figure out how to use socket to send browser to next page/route
+    /* I need to figure out how to use socket to send browser to next page/route
     function toRoom(roomNum) {
       socket.emit('createRoom', roomNum);
-    }
+    }*/ 
 
     socket.on('message', (data) => {
       el = document.getElementById('msg')
@@ -55,7 +55,7 @@
     <h3 id="initMsg"> Choose a plant to take care of</h3>
     <div class="flex-container">
       <div class="flex-item"><a href='/tree'>
-          <button id="tree" onclick="toRoom(1)" type="button" class="btn "><img
+          <button id="tree"  type="button" class="btn "><img
               src="/images/tree.png" alt="">
             <p>Tree</p>
           </button></a>
