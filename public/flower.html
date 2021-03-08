@@ -9,7 +9,24 @@
   <title> Tree needs</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="play.css">
-  <script defer src="play.js"></script>
+
+ <script src="/socket.io/socket.io.js"></script> 
+ <script defer src="play.js"> </script>
+ <script>
+    let socket = io(); //create a new socket using io lib
+    let el;
+
+    socket.emit("createRoom", 4);
+
+    socket.on('time', function (timeString) {
+      el = document.getElementById('server-time')
+      el.innerHTML = 'Server time: ' + timeString;
+    });
+
+
+  //we need to create an automated decrement
+  </script>
+
 </head>
 
 <body>

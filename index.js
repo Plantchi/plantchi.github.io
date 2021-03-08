@@ -15,6 +15,7 @@ const PORT = process.env.PORT || 3000;
 //set up app
 var app = express();
 
+//create our server via express
 var server = app.listen(PORT, () => {
   console.log(`Our app is running on port ${PORT}`);
 });
@@ -56,25 +57,20 @@ app.get("/succulent", (req, res) => {
 app.get("/flower", (req, res) => {
   res.sendFile(FLOWER, { root: __dirname });
 });
-/*
+
 io.on("connection", (socket) => {
-  //"socket" refers to socket made for this instance -aka each client has own socket
+ /*"socket" refers to socket made for this instance -aka each client has own socket 
+  to communicate to and from server */
   console.log("Client connected");
 
   socket.on("createRoom", (room) => {
     socket.join(room);
     console.log("client joined room " + room);
-//    io.in(room).emit("message", "sup plant nerds");
+    //io.in(room).emit("message", "sup plant nerds");
   });
-  
-  socket.on("changeHp", function(data){
-    data += 3; 
-  }); 
 
   socket.on("disconnect", () => console.log("Client disconnected"));
 });
 
 //test function
 setInterval(() => io.emit("time", new Date().toTimeString()), 1000);
-
-*/ 
