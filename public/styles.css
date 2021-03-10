@@ -1,7 +1,10 @@
 a {
-  color:rebeccapurple !important;
+  color: rebeccapurple !important;
   font-size: 20px;
-} 
+}
+a:hover {
+  color: mediumvioletred !important;
+}
 
 body {
   background-color: #c8fae8;
@@ -53,6 +56,7 @@ li {
   color: rebeccapurple;
   margin-left: 10px;
   list-style-type: circle;
+  font-weight: bold;
 }
 
 img {
@@ -65,9 +69,7 @@ header {
   border-color: rebeccapurple;
   padding: 10px;
 }
-p {
-  font-weight: bold;
-}
+
 .needs_images {
   height: 90px;
   width: 90px;
