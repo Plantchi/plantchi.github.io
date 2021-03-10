@@ -29,10 +29,15 @@
 
 </head>
 
-<body>
+<body onload="setInterval(function(){
+  decrement('sun-bar')
+  decrement('fun-bar')
+  decrement('food-bar')
+  decrement('thirst-bar')
+  }, 5000 );">
   <main>
     <header>
-      <h1>What does your plant need?</h1>
+      <h1 class="text-center">What does your plant need?</h1>
       <a href="/">Click here to start a new game </a><br>
     </header>
     <div class="flex-container">
