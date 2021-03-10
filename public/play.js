@@ -34,3 +34,17 @@ function getProgress(needs_bar) {
       setProgress(needs_bar, i);
     }
   }
+  
+  function checkLoss(sun_bar
+    // , fun_bar, food_bar, thirst_bar
+    ) {
+  
+    let sun_loss = getProgress(sun_bar);
+    // let fun_loss = getProgress(fun_bar);
+    // let food_loss = getProgress(food_bar);
+    // let thirst_loss = getProgress(thirst_bar);
+  
+    if(sun_loss < 5)
+      //redirect to '/gameover'
+  
+  }

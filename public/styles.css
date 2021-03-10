@@ -2,6 +2,9 @@ a {
   color: rebeccapurple !important;
   font-size: 20px;
 }
+a:hover {
+  color: mediumvioletred !important;
+}
 
 body {
   background-color: #c8fae8;
