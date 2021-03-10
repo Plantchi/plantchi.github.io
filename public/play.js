@@ -44,7 +44,7 @@ function getProgress(needs_bar) {
     // let food_loss = getProgress(food_bar);
     // let thirst_loss = getProgress(thirst_bar);
   
-    if(sun_loss < 5)
+    // if(sun_loss < 5)
       //redirect to '/gameover'
   
   }
