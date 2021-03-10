@@ -30,7 +30,12 @@
 
 </head>
 
-<body>
+<body onload="setInterval(function(){
+  decrement('sun-bar')
+  decrement('fun-bar')
+  decrement('food-bar')
+  decrement('thirst-bar')
+  }, 5000 );">
   <main>
     <header>
       <h1 class="text-center">What does your plant need?</h1>
