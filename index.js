@@ -37,7 +37,6 @@ cloudinary.config({
   api_secret: "Axiqeb_EEk6M67Gjjdngnod4cJ0",
 });
 
-
 app.get("/", (req, res) => {
   res.sendFile(HOME, { root: __dirname });
 });
@@ -47,7 +46,7 @@ app.get("/howto", (req, res) => {
 });
 
 app.get("/tree", (req, res) => {
-  res.sendFile(TREE, { root: __dirname }); 
+  res.sendFile(TREE, { root: __dirname });
 });
 
 app.get("/vine", (req, res) => {
@@ -67,7 +66,7 @@ app.get("/gameover", (req, res) => {
 });
 
 io.on("connection", (socket) => {
- /*"socket" refers to socket made for this instance -aka each client has own socket 
+  /*"socket" refers to socket made for this instance -aka each client has own socket 
   to communicate to and from server */
   console.log("Client connected");
 
