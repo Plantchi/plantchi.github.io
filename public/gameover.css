@@ -1,11 +1,13 @@
 h1 {
   font-size: 42px;
 }
-
-.vine_leaving {
-  width: 172px;
-  height: 200px;
+.flex-leaving {
+  border: solid 3px;
+  border-radius: 10px;
+  border-color: rebeccapurple;
+  padding: 10px;
 }
+
 
 @media screen and (max-width: 700px) {
   .train_img {
@@ -21,9 +23,9 @@ h1 {
     width: 355px !important;
     height: 108px !important;
   }
-
-  .vine_leaving {
-    width: 155px;
-    height: 180px !important;
+  img {
+    width: 70%;
+    height: 110%;
   }
+
 }
