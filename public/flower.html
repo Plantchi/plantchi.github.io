@@ -18,13 +18,6 @@
 
     socket.emit("createRoom", 4);
 
-    socket.on('time', function (timeString) {
-      el = document.getElementById('server-time')
-      el.innerHTML = 'Server time: ' + timeString;
-    });
-
-
-  //we need to create an automated decrement
   </script>
 
 </head>
@@ -34,7 +27,12 @@
   decrement('fun-bar')
   decrement('food-bar')
   decrement('thirst-bar')
-  }, 5000 );">
+
+  checkLoss('sun-bar')
+  checkLoss('fun-bar')
+  checkLoss('food-bar')
+  checkLoss('thirst-bar')
+  }, 2000 );">
   <main>
     <header>
       <h1 class="text-center">What does your plant need?</h1>
