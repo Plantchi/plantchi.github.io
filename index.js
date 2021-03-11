@@ -1,5 +1,7 @@
 /*local port is set to :   http://localhost:3000
- */
+
+This index.js is our server file, it kickstarts the modules required to set up an express server and use socketIO within said server. 
+*/
 
 //module requests/consts
 var express = require("express");

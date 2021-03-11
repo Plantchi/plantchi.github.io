@@ -19,22 +19,22 @@
 
     socket.emit("createRoom", 2);
 
-    socket.on('time', function (timeString) {
-      el = document.getElementById('server-time')
-      el.innerHTML = 'Server time: ' + timeString;
-    });
-
-
   </script>
 
 </head>
+
 
 <body onload="setInterval(function(){
   decrement('sun-bar')
   decrement('fun-bar')
   decrement('food-bar')
   decrement('thirst-bar')
-  }, 5000 );">
+
+  checkLoss('sun-bar')
+  checkLoss('fun-bar')
+  checkLoss('food-bar')
+  checkLoss('thirst-bar')
+  }, 1000 );">
   <main>
     <header>
       <h1 class="text-center">What does your plant need?</h1>

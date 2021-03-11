@@ -18,22 +18,21 @@
     let el;
 
     socket.emit("createRoom", 1);
-
-    socket.on('time', function (timeString) {
-      el = document.getElementById('server-time')
-      el.innerHTML = 'Server time: ' + timeString;
-    });
+ 
   </script>
 </head>
 
+ <!--timed fn to create quick and reactive gameplay --> 
 <body onload="setInterval(function(){
   decrement('sun-bar')
   decrement('fun-bar')
   decrement('food-bar')
   decrement('thirst-bar')
-  checkLoss('sun-bar'
-  // , 'fun-bar', 'food-bar', 'thirst-bar'
-  )
+
+  checkLoss('sun-bar')
+  checkLoss('fun-bar')
+  checkLoss('food-bar')
+  checkLoss('thirst-bar')
   }, 1000 );">
   <main>
     <header>
@@ -42,7 +41,7 @@
     </header>
     <div class="flex-container">
       <div class="flex-item">
-        <button type="button" onclick="increment('sun-bar'); decrement('thirst-bar')" class="btn">
+        <button type="button" onclick="increment('sun-bar'); decrement(sun-bar)" class="btn">
           <img class="needs_images" src="https://res.cloudinary.com/dkpjewza8/image/upload/v1614401607/sun_1_orcvxh.png" alt="">
           <p>Sun</p>
         </button>
