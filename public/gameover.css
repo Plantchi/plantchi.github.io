@@ -2,7 +2,7 @@ h1 {
   font-size: 42px;
 }
 
-.plant_leaving {
+.vine_leaving {
   width: 172px;
   height: 200px;
 }
@@ -22,7 +22,7 @@ h1 {
     height: 108px !important;
   }
 
-  .plant_leaving {
+  .vine_leaving {
     width: 155px;
     height: 180px !important;
   }
