@@ -50,7 +50,7 @@ function checkLoss(needs_bar) {
     if (currentLocation == "localhost") {
       window.location.assign("http://localhost:3000/gameover");
     } else {
-      window.location.assign("https://plantchi.herokuapp.com/gameover");
+      window.location.assign("https://plantchi.onrender.com/gameover");
     }
   }
 }
